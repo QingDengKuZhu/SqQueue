@@ -42,3 +42,18 @@ BOOL QueueEmpty(const SQQUEUE *pQ)
 		return FALSE;
 	}
 }
+
+/*
+**约定以"对头指针在队尾指针的下一位置(指环状的下一位置)上",作为队列呈"满"状态的标志.
+*/
+BOOL QueueFull(const SQQUEUE *pQ)
+{
+	if (1 == (pQ->rear - pQ->front))
+	{
+		return TRUE;
+	}
+	else
+	{
+		return FALSE;
+	}
+}
