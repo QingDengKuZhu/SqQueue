@@ -23,6 +23,9 @@ void ClearQueue(SQQUEUE *pQ);
 /*判断循环队列是否为空.若为空,函数返回TRUE;否者函数返回FALSE.*/
 BOOL QueueEmpty(const SQQUEUE *pQ);
 
+/*判断循环队列是否为满.若为满,函数返回TRUE;否者函数返回FALSE.*/
+BOOL QueueFull(const SQQUEUE *pQ);
+
 /*返回循环对列的长度*/
 size_t QueueLength(const SQQUEUE *pQ);
 
