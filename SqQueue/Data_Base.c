@@ -22,3 +22,12 @@ void InitQueue(SQQUEUE *pQ)
 
 	return;
 }
+
+void DestroyQueue(SQQUEUE *pQ)
+{
+	pQ->front = pQ->rear = 0;
+	free(pQ->data);
+
+	return;
+}
+}
