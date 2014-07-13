@@ -57,3 +57,17 @@ BOOL QueueFull(const SQQUEUE *pQ)
 		return FALSE;
 	}
 }
+
+STATUS GetHead(const SQQUEUE *pQ, Elem *e)
+{
+	if (TRUE == QueueEmpty(pQ))
+	{
+		return FAILE;
+	}
+	else
+	{
+		*e = pQ->data[pQ->front];
+		
+		return OK;
+	}
+}
