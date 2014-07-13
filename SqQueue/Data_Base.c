@@ -30,4 +30,15 @@ void DestroyQueue(SQQUEUE *pQ)
 
 	return;
 }
+
+BOOL QueueEmpty(const SQQUEUE *pQ)
+{
+	if (pQ->front == pQ->rear)
+	{
+		return TRUE;
+	}
+	else
+	{
+		return FALSE;
+	}
 }
